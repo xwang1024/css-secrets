@@ -1,0 +1,11 @@
+{
+  "name": "css-secrets",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "git@github.com:xwang1024/css-secrets.git",
+  "author": "XWang1024 <xwang1024@126.com>",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
+}
