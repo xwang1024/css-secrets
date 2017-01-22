@@ -20,31 +20,31 @@ button.btn {
     line-height: 1.5;
     padding: .3em .8em;
     position: relative;
+
+    &:hover,
+    &:active {
+        box-shadow: #58a 0 .05em .25em rgba(0, 0, 0, .6);
+    }
+
+    &:hover:after,
+    &:active:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: .2em;
+    }
+
+    &:hover:after {
+        background-color: hsla(0, 0%, 100%, .1);
+    }
+
+    &:active:after {
+        background-color: hsla(0, 0%, 0%, .1);
+    }
 }
-
-button.btn:hover:after, button.btn:active:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: .2em;
-}
-
-button.btn:hover, button.btn:active {
-    box-shadow: #58a 0 .05em .25em rgba(0, 0, 0, .6);
-}
-
-button.btn:hover:after {
-    background-color: hsla(0, 0%, 100%, .1);
-}
-
-button.btn:active:after {
-    background-color: hsla(0, 0%, 0%, .1);
-}
-
-
 
 .btn.btn-primary {
     background-color: #58a;
