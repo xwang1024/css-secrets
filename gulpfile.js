@@ -11,7 +11,7 @@ const reload      = browserSync.reload;
 const config = {
   pug: {
     src: 'src/views/**/*.pug',
-    watch: 'src/views/**/*.pug'
+    watch: ['src/views/**/*.pug', 'src/layout/**/*.pug']
   },
   sass: {
     src: 'src/sass/index.scss',

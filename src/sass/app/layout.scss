@@ -3,6 +3,15 @@ body {
 }
 
 .wrapper {
-  width: 680px;
+  padding: 12px;
+}
+
+.container {
+  width: 980px;
+  margin: auto;
+}
+
+.container-fluid {
+  width: 100%;
   margin: auto;
 }
