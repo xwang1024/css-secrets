@@ -1,0 +1,46 @@
+button.btn {
+  outline: none;
+  background: linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+  border: .05em solid rgba(0, 0, 0, .1);
+  border-radius: .2em;
+  color: white;
+  box-shadow: 0 .05em .25em rgba(0, 0, 0, .5);
+  text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
+  font-size: 125%;
+  line-height: 1.5;
+  padding: .3em .8em;
+  position: relative;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    box-shadow: 0 0.05em 0.25em rgba(0, 0, 0, .6)
+  }
+  &:hover:after,
+  &:active:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: .2em;
+  }
+  &:hover:after {
+    background-color: hsla(0, 0%, 100%, .1);
+  }
+  &:active:after {
+    background-color: hsla(0, 0%, 0%, .1);
+  }
+}
+
+.btn.btn-primary {
+  background-color: #58a;
+}
+
+.btn.btn-danger {
+  background-color: #c00;
+}
+
+.btn.btn-success {
+  background-color: #6b0;
+}

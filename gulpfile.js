@@ -9,18 +9,24 @@ const browserSync = require('browser-sync').create();
 const reload      = browserSync.reload;
 
 const config = {
-  pugFiles: 'src/views/**/*.pug',
-  sassFiles: 'src/sass/**/*.scss'
+  pug: {
+    src: 'src/views/**/*.pug',
+    watch: 'src/views/**/*.pug'
+  },
+  sass: {
+    src: 'src/sass/index.scss',
+    watch: 'src/sass/**/*.scss'
+  }
 }
 
 gulp.task('pug', function(){
-  return gulp.src(config.pugFiles)
+  return gulp.src(config.pug.src)
     .pipe(pug())
     .pipe(gulp.dest('build'))
 });
 
 gulp.task('sass', function(){
-  return gulp.src(config.sassFiles)
+  return gulp.src(config.sass.src)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCSS())
@@ -29,11 +35,15 @@ gulp.task('sass', function(){
 });
 
 gulp.task('pug:watch', function () {
-  gulp.watch(config.pugFiles, ['pug']).on("change", reload);;
+  gulp.watch(config.pug.watch, ['pug']).on("change", () => {
+    setTimeout(reload, 300);
+  });
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch(config.sassFiles, ['sass']).on("change", reload);;
+  gulp.watch(config.sass.watch, ['sass']).on("change", () => {
+    setTimeout(reload, 300);
+  });
 });
 
 gulp.task('build', [ 'pug', 'sass' ]);

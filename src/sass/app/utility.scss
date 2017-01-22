@@ -1,0 +1,67 @@
+
+// margin
+$marginodes: xl, lg, default, sm, xs;
+$magins: 24px, 18px, 12px, 6px, 3px;
+
+$directionSuffixes: r, l, t, b;
+$directions: right, left, top, bottom;
+
+@for $i from 1 through length($marginodes) {
+  @if nth($marginodes, $i) == "default" {
+    @for $j from 1 through length($directionSuffixes) {
+      .m#{nth($directionSuffixes, $j)} {
+        margin-#{nth($directions, $j)}: nth($magins, $i);
+      }
+    }
+    .m {
+      margin: nth($magins, $i);
+    }
+  } @else {
+    @for $j from 1 through length($directionSuffixes) {
+      .m#{nth($directionSuffixes, $j)}-#{nth($marginodes, $i)} {
+        margin-#{nth($directions, $j)}: nth($magins, $i);
+      }
+    }
+    .m-#{nth($marginodes, $i)} {
+      margin: nth($magins, $i);
+    }
+  }
+}
+
+// padding
+$paddingCodes: xl, lg, default, sm, xs;
+$paddings: 24px, 18px, 12px, 6px, 3px;
+
+$directionSuffixes: r, l, t, b;
+$directions: right, left, top, bottom;
+
+@for $i from 1 through length($paddingCodes) {
+  @if nth($paddingCodes, $i) == "default" {
+    @for $j from 1 through length($directionSuffixes) {
+      .p#{nth($directionSuffixes, $j)} {
+        padding-#{nth($directions, $j)}: nth($paddings, $i);
+      }
+    }
+    .p {
+      margin: nth($magins, $i);
+    }
+  } @else {
+    @for $j from 1 through length($directionSuffixes) {
+      .p#{nth($directionSuffixes, $j)}-#{nth($paddingCodes, $i)} {
+        padding-#{nth($directions, $j)}: nth($paddings, $i);
+      }
+    }
+    .p-#{nth($paddingCodes, $i)} {
+      margin: nth($magins, $i);
+    }
+  }
+}
+
+// align
+$alignDirections: left, center, right;
+
+@for $i from 1 through length($alignDirections) {
+  .text-#{nth($alignDirections, $i)} {
+    text-align: nth($alignDirections, $i) !important;
+  }
+}
