@@ -22,7 +22,7 @@ const config = {
 gulp.task('pug', function(){
   return gulp.src(config.pug.src)
     .pipe(pug())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('public'))
 });
 
 gulp.task('sass', function(){
@@ -31,7 +31,7 @@ gulp.task('sass', function(){
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('public/css'))
 });
 
 gulp.task('pug:watch', function () {
@@ -51,7 +51,7 @@ gulp.task('watch', [ 'pug:watch', 'sass:watch' ]);
 gulp.task('serve', function () {
     browserSync.init({
         server: {
-            baseDir: "./build"
+            baseDir: "./public"
         }
     });
 });
