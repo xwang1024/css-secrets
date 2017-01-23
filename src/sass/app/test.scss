@@ -77,3 +77,37 @@
   outline: 12px solid darkslategray;
   box-shadow: 0 0 0 7px darkslategray; // 大于 (1.41-1)*16即可
 }
+
+.test-cib-1 {
+  width: 100%;
+  padding: 5em;
+  border: 5em solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              url(../img/miku-1.jpg) border-box 0 / cover;
+}
+
+.test-cib-2 {
+  width: 100%;
+  padding: 1em;
+  border: 1em solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              repeating-linear-gradient(-45deg,
+                #f55 0, #f55 12.5%,
+                transparent 0, transparent 25%,
+                #58a 0, #58a 37.5%,
+                transparent 0, transparent 50%)
+              0 / 5em 5em;
+}
+
+@keyframes ants { to { background-position: 100%; } }
+
+.test-cib-3 {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              repeating-linear-gradient(-45deg,
+                black 0, black 25%, white 0, white 50%
+              ) 0 / .5em .5em;
+  animation: ants 80s linear infinite;
+}
