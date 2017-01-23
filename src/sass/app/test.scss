@@ -21,5 +21,41 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: 16px solid hsla(0, 0%, 100%, .5);
-  background-clip: padding-box;
+  background-clip: padding-box; // 指定背景的绘制区域
+}
+
+.test-mb-1 {
+  background: yellowgreen;
+  width: 100%;
+  height: 480px;
+  box-shadow: 0 0 0 10px #655,
+              0 0 0 15px deeppink,
+              0 2px 5px 15px rgba(0, 0, 0, .6);
+}
+
+.test-mb-2 {
+  background: #655;
+  width: 100%;
+  height: 480px;
+  border: 15px solid #655;
+  border-radius: 6px;
+  outline: 1px dashed white;
+  outline-offset: -15px;
+}
+
+.test-ebp-1 {
+  width: 100%;
+  height: 480px;
+  background: url(../img/miku-2.jpg) no-repeat bottom right lightseagreen;
+  background-size: 240px;
+  background-position: right 20px bottom 20px;
+}
+
+.test-ebp-2 {
+  width: 100%;
+  height: 480px;
+  padding: 20px;
+  background: url(../img/miku-2.jpg) no-repeat bottom right lightseagreen;
+  background-size: 240px;
+  background-origin: content-box; // 指定背景的定位方式
 }
