@@ -43,7 +43,7 @@
   outline-offset: -15px;
 }
 
-.test-ebp-1 {
+.test-fbp-1 {
   width: 100%;
   height: 480px;
   background: url(../img/miku-2.jpg) no-repeat bottom right lightseagreen;
@@ -51,11 +51,19 @@
   background-position: right 20px bottom 20px;
 }
 
-.test-ebp-2 {
+.test-fbp-2 {
   width: 100%;
   height: 480px;
   padding: 20px;
   background: url(../img/miku-2.jpg) no-repeat bottom right lightseagreen;
   background-size: 240px;
   background-origin: content-box; // 指定背景的定位方式
+}
+
+.test-fbp-3 {
+  width: 100%;
+  height: 480px;
+  background: url(../img/miku-2.jpg) no-repeat bottom right lightseagreen;
+  background-size: 240px;
+  background-position: calc(100% - 20px) calc(100% - 20px); // 注意减号两边的空格
 }
