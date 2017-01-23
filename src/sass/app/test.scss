@@ -21,7 +21,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: 16px solid hsla(0, 0%, 100%, .5);
-  background-clip: padding-box; // 指定背景的绘制区域
+  background-clip: padding-box; /* 指定背景的绘制区域 */
 }
 
 .test-mb-1 {
@@ -57,7 +57,7 @@
   padding: 20px;
   background: url(../img/miku-2.jpg) no-repeat bottom right lightseagreen;
   background-size: 240px;
-  background-origin: content-box; // 指定背景的定位方式
+  background-origin: content-box; /* 指定背景的定位方式 */
 }
 
 .test-fbp-3 {
@@ -65,5 +65,15 @@
   height: 480px;
   background: url(../img/miku-2.jpg) no-repeat bottom right lightseagreen;
   background-size: 240px;
-  background-position: calc(100% - 20px) calc(100% - 20px); // 注意减号两边的空格
+  background-position: calc(100% - 20px) calc(100% - 20px); /* 注意减号两边的空格 */
+}
+
+.test-ir {
+  width: 100%;
+  background-color: lightseagreen;
+  color: white;
+  padding: 36px;
+  border-radius: 16px;
+  outline: 12px solid darkslategray;
+  box-shadow: 0 0 0 7px darkslategray; // 大于 (1.41-1)*16即可
 }

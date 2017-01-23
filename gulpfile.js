@@ -29,7 +29,7 @@ gulp.task('sass', function(){
   return gulp.src(config.sass.src)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(minifyCSS())
+    // .pipe(minifyCSS())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/css'))
 });
